@@ -2,7 +2,7 @@
 
 pkgname=rtkit-s6serv
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="rtkit service for s6"
 arch=(x86_64)
 license=('beerware')
@@ -24,7 +24,7 @@ package() {
 	
 	# log
 	install -Dm 0755 "$srcdir/rtkit.log.run.s6" "$pkgdir/etc/s6-serv/available/classic/rtkit/log/run"
-	install -Dm 0644 "$srcdir/rtkit.logd" "$pkgdir/etc/s6-serv/log.d/serv/rtkit"
+	install -Dm 0644 "$srcdir/rtkit.logd" "$pkgdir/etc/s6-serv/log.d/rtkit"
 	
 	install -Dm 0755 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/rtkit-s6serv/LICENSE"
 }
